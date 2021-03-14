@@ -29,7 +29,7 @@ public class CharacterController {
     private static final Logger LOGGER = LogManager.getLogger(CharacterController.class);
 
     @Autowired
-    private CharacterService characterService;
+    private CharacterService    characterService;
 
     @GetMapping(value = "")
     @ResponseStatus(HttpStatus.OK)

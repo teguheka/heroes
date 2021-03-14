@@ -9,10 +9,7 @@ package id.evos.heroes.enums;
  * @version $Id: ClassArchetypeEnum.java, v 0.1 2021‐03‐14 21.02 Teguh Eka Putra Exp $$
  */
 public enum ClassArchetypeEnum {
-    WIZARD,
-    ELF,
-    HOBBIT
-    ;
+                                WIZARD, ELF, HOBBIT;
 
     public static ClassArchetypeEnum getEnumByName(final String name) {
 

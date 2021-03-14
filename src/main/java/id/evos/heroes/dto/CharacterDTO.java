@@ -107,12 +107,7 @@ public class CharacterDTO {
 
     @Override
     public String toString() {
-        return "CharacterDTO{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", characterCode=" + characterCode +
-                ", power=" + power +
-                ", value=" + value +
-                '}';
+        return "CharacterDTO{" + "id='" + id + '\'' + ", name='" + name + '\'' + ", characterCode="
+               + characterCode + ", power=" + power + ", value=" + value + '}';
     }
 }

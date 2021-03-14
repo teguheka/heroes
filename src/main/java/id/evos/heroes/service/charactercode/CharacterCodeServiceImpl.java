@@ -16,7 +16,8 @@ import id.evos.heroes.repository.CharacterCodeRepository;
  */
 public class CharacterCodeServiceImpl implements CharacterCodeService {
 
-    @Autowired private CharacterCodeRepository characterCodeRepository;
+    @Autowired
+    private CharacterCodeRepository characterCodeRepository;
 
     @Override
     public CharacterCodeDTO findOne(String id) {

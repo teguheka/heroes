@@ -12,5 +12,6 @@ import id.evos.heroes.enums.ClassArchetypeEnum;
  */
 public interface ClassArchetypeService {
     Long doCalculateValue(Long power);
+
     ClassArchetypeEnum getCharacterCodeStrategy();
 }
