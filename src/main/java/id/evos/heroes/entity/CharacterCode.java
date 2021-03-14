@@ -23,6 +23,15 @@ public class CharacterCode implements Serializable {
     private String            name;
     private String            description;
 
+    public CharacterCode() {
+    }
+
+    public CharacterCode(Long code, String name, String description) {
+        this.code = code;
+        this.name = name;
+        this.description = description;
+    }
+
     /**
      * Getter method for property id.
      *
