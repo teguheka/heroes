@@ -32,26 +32,28 @@ public class InitDataHeroesApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         LOGGER.info("InitDataHeroesApplication run method Started !!");
 
-        List<Character> characters = new ArrayList<>();
+        if (characterRepository.findAll().size() > 0) {
+            List<Character> characters = new ArrayList<>();
 
-        Character character1 = new Character();
-        character1.setName("Gandalf");
-        character1.setPower(100L);
-        character1.setCharacterCode(new CharacterCode(1L, "WIZARD", "magician"));
-        characters.add(character1);
+            Character character1 = new Character();
+            character1.setName("Gandalf");
+            character1.setPower(100L);
+            character1.setCharacterCode(new CharacterCode(1L, "WIZARD", "magician"));
+            characters.add(character1);
 
-        Character character2 = new Character();
-        character2.setName("Legolas");
-        character2.setPower(60L);
-        character2.setCharacterCode(new CharacterCode(2L, "ELF", "elf"));
-        characters.add(character2);
+            Character character2 = new Character();
+            character2.setName("Legolas");
+            character2.setPower(60L);
+            character2.setCharacterCode(new CharacterCode(2L, "ELF", "elf"));
+            characters.add(character2);
 
-        Character character3 = new Character();
-        character3.setName("Frodo");
-        character3.setPower(10L);
-        character3.setCharacterCode(new CharacterCode(3L, "HOBBIT", "hobbit"));
-        characters.add(character3);
+            Character character3 = new Character();
+            character3.setName("Frodo");
+            character3.setPower(10L);
+            character3.setCharacterCode(new CharacterCode(3L, "HOBBIT", "hobbit"));
+            characters.add(character3);
 
-        characterRepository.saveAll(characters);
+            characterRepository.saveAll(characters);
+        }
     }
 }
