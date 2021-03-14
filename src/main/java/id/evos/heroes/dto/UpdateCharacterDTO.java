@@ -69,7 +69,10 @@ public class UpdateCharacterDTO {
 
     @Override
     public String toString() {
-        return "UpdateCharacterDTO{" + "id='" + id + '\'' + ", name='" + name + '\'' + ", power="
-               + power + '}';
+        return "UpdateCharacterDTO{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", power=" + power +
+                '}';
     }
 }

@@ -18,7 +18,7 @@ import java.util.Map;
 public class IndexController {
 
     @GetMapping("")
-    public Map updateCharater() {
+    public Map home() {
         Map<String, String> map = new HashMap<>();
         map.put("hello", "world");
         return map;

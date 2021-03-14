@@ -31,8 +31,9 @@ public class InitDataHeroesApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         LOGGER.info("InitDataHeroesApplication run method Started !!");
+        LOGGER.info("total existing data: " + characterRepository.findAll().size());
 
-        if (characterRepository.findAll().size() > 0) {
+        if (characterRepository.findAll().isEmpty()) {
             List<Character> characters = new ArrayList<>();
 
             Character character1 = new Character();
