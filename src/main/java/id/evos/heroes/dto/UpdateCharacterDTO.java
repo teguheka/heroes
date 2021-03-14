@@ -6,14 +6,12 @@ package id.evos.heroes.dto;
 
 /**
  * @author Teguh Eka Putra
- * @version $Id: CharacterDTO.java, v 0.1 2021‐03‐14 20.36 Teguh Eka Putra Exp $$
+ * @version $Id: UpdateCharacterDTO.java, v 0.1 2021‐03‐14 22.03 Teguh Eka Putra Exp $$
  */
-public class CharacterDTO {
+public class UpdateCharacterDTO {
     private String id;
     private String name;
-    private Long   characterCode;
     private Long   power;
-    private Long   value;
 
     /**
      * Getter method for property id.
@@ -52,24 +50,6 @@ public class CharacterDTO {
     }
 
     /**
-     * Getter method for property characterCode.
-     *
-     * @return property value of characterCode
-     */
-    public Long getCharacterCode() {
-        return characterCode;
-    }
-
-    /**
-     * Setter method for property characterCode.
-     *
-     * @param characterCode value to be assigned to property characterCode
-     */
-    public void setCharacterCode(Long characterCode) {
-        this.characterCode = characterCode;
-    }
-
-    /**
      * Getter method for property power.
      *
      * @return property value of power
@@ -87,27 +67,9 @@ public class CharacterDTO {
         this.power = power;
     }
 
-    /**
-     * Getter method for property value.
-     *
-     * @return property value of value
-     */
-    public Long getValue() {
-        return value;
-    }
-
-    /**
-     * Setter method for property value.
-     *
-     * @param value value to be assigned to property value
-     */
-    public void setValue(Long value) {
-        this.value = value;
-    }
-
     @Override
     public String toString() {
-        return "CharacterDTO{" + "id='" + id + '\'' + ", name='" + name + '\'' + ", characterCode="
-               + characterCode + ", power=" + power + ", value=" + value + '}';
+        return "UpdateCharacterDTO{" + "id='" + id + '\'' + ", name='" + name + '\'' + ", power="
+               + power + '}';
     }
 }

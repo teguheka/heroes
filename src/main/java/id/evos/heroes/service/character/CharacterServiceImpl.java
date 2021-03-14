@@ -7,10 +7,11 @@ package id.evos.heroes.service.character;
 import java.util.ArrayList;
 import java.util.List;
 
+import id.evos.heroes.dto.ListCharacterDTO;
+import id.evos.heroes.dto.UpdateCharacterDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import id.evos.heroes.dto.CharacterDTO;
 import id.evos.heroes.entity.Character;
 import id.evos.heroes.enums.ClassArchetypeEnum;
 import id.evos.heroes.factory.ClassArchetypeFactory;
@@ -30,14 +31,14 @@ public class CharacterServiceImpl implements CharacterService {
     @Autowired
     private ClassArchetypeFactory classArchetypeFactory;
 
-    public List<CharacterDTO> findAll() {
-        List<CharacterDTO> characterDTOList = new ArrayList<>();
+    public List<ListCharacterDTO> findAll() {
+        List<ListCharacterDTO> characterDTOList = new ArrayList<>();
 
         List<Character> characters = characterRepository.findAll();
 
         if (!characters.isEmpty()) {
             characters.forEach(character -> {
-                CharacterDTO dto = new CharacterDTO();
+                ListCharacterDTO dto = new ListCharacterDTO();
                 dto.setId(character.getId());
                 dto.setCharacterCode(character.getCharacterCode().getCode());
                 dto.setName(character.getName());
@@ -49,6 +50,16 @@ public class CharacterServiceImpl implements CharacterService {
         }
 
         return characterDTOList;
+    }
+
+    @Override
+    public void updateCharacter(UpdateCharacterDTO dto) {
+        Character character = characterRepository.findById(dto.getId()).orElse(null);
+        if (character != null) {
+            character.setName(dto.getName());
+            character.setPower(dto.getPower());
+            characterRepository.save(character);
+        }
     }
 
     private Long getCharacterValue(String characterCodeName, Long power) {
