@@ -1,0 +1,15 @@
+/**
+ * DANA.id
+ * Copyright (c) 2004‐2021 All Rights Reserved.
+ */
+package id.evos.heroes.repository;
+
+import id.evos.heroes.entity.Character;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+/**
+ * @author Teguh Eka Putra
+ * @version $Id: CharacterRepository.java, v 0.1 2021‐03‐14 20.29 Teguh Eka Putra Exp $$
+ */
+public interface CharacterRepository extends MongoRepository<Character, String> {
+}
