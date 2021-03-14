@@ -4,8 +4,9 @@
  */
 package id.evos.heroes.repository;
 
-import id.evos.heroes.entity.Character;
 import org.springframework.data.mongodb.repository.MongoRepository;
+
+import id.evos.heroes.entity.Character;
 
 /**
  * @author Teguh Eka Putra

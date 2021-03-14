@@ -2,26 +2,17 @@
  * DANA.id
  * Copyright (c) 2004‐2021 All Rights Reserved.
  */
-package id.evos.heroes.entity;
-
-import java.io.Serializable;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+package id.evos.heroes.dto;
 
 /**
  * @author Teguh Eka Putra
- * @version $Id: CharacterCode.java, v 0.1 2021‐03‐14 20.10 Teguh Eka Putra Exp $$
+ * @version $Id: CharacterCodeDTO.java, v 0.1 2021‐03‐14 21.37 Teguh Eka Putra Exp $$
  */
-@Document(collection = "character_code")
-public class CharacterCode implements Serializable {
-    private static final long serialVersionUID = 3067661101579943339L;
-
-    @Id
-    private String            id;
-    private Long              code;
-    private String            name;
-    private String            description;
+public class CharacterCodeDTO {
+    private String id;
+    private Long   code;
+    private String name;
+    private String description;
 
     /**
      * Getter method for property id.

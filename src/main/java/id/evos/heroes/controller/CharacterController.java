@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import id.evos.heroes.dto.CharacterDTO;
-import id.evos.heroes.service.CharacterService;
+import id.evos.heroes.service.character.CharacterService;
 
 /**
  * @author Teguh Eka Putra

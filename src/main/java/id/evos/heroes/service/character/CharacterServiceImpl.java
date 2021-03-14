@@ -2,7 +2,7 @@
  * DANA.id
  * Copyright (c) 2004‐2021 All Rights Reserved.
  */
-package id.evos.heroes.service;
+package id.evos.heroes.service.character;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +12,23 @@ import org.springframework.stereotype.Service;
 
 import id.evos.heroes.dto.CharacterDTO;
 import id.evos.heroes.entity.Character;
+import id.evos.heroes.enums.ClassArchetypeEnum;
+import id.evos.heroes.factory.ClassArchetypeFactory;
 import id.evos.heroes.repository.CharacterRepository;
+import id.evos.heroes.service.classarchetype.ClassArchetypeService;
 
 /**
  * @author Teguh Eka Putra
- * @version $Id: CharacterService.java, v 0.1 2021‐03‐14 20.33 Teguh Eka Putra Exp $$
+ * @version $Id: CharacterServiceImpl.java, v 0.1 2021‐03‐14 21.09 Teguh Eka Putra Exp $$
  */
 @Service
-public class CharacterService {
+public class CharacterServiceImpl implements CharacterService {
 
     @Autowired
-    private CharacterRepository characterRepository;
+    private CharacterRepository   characterRepository;
+
+    @Autowired
+    private ClassArchetypeFactory classArchetypeFactory;
 
     public List<CharacterDTO> findAll() {
         List<CharacterDTO> characterDTOList = new ArrayList<>();
@@ -36,13 +42,19 @@ public class CharacterService {
                 dto.setCharacterCode(character.getCharacterCode().getCode());
                 dto.setName(character.getName());
                 dto.setPower(character.getPower());
-
-                //TODO set service to calculate
-                dto.setValue(1L);
+                dto.setValue(
+                    getCharacterValue(character.getCharacterCode().getName(), dto.getPower()));
                 characterDTOList.add(dto);
             });
         }
 
         return characterDTOList;
+    }
+
+    private Long getCharacterValue(String characterCodeName, Long power) {
+        ClassArchetypeEnum classArchetypeEnum = ClassArchetypeEnum.getEnumByName(characterCodeName);
+        ClassArchetypeService characterCodeService = classArchetypeFactory
+            .classifyClassArchetype(classArchetypeEnum);
+        return characterCodeService.doCalculateValue(power);
     }
 }
