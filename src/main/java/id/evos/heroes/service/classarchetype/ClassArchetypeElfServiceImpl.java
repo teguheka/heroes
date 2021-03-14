@@ -17,8 +17,7 @@ public class ClassArchetypeElfServiceImpl implements ClassArchetypeService {
 
     @Override
     public Long doCalculateValue(Long power) {
-        Long basePower = 150L;
-        return basePower;
+        return 2 + (power * 110) / 100;
     }
 
     @Override

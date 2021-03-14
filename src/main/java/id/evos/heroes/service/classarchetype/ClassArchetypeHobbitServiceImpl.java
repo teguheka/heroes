@@ -17,8 +17,15 @@ public class ClassArchetypeHobbitServiceImpl implements ClassArchetypeService {
 
     @Override
     public Long doCalculateValue(Long power) {
-        Long basePower = 150L;
-        return basePower;
+        Long value;
+
+        if (power < 20) {
+            value = (power * 200) / 100;
+        } else {
+            value = (power * 300) / 100;
+        }
+
+        return value;
     }
 
     @Override

@@ -15,10 +15,14 @@ import id.evos.heroes.enums.ClassArchetypeEnum;
 @Component
 public class ClassArchetypeWizardServiceImpl implements ClassArchetypeService {
 
+    /**
+     * 150% of magic power
+     * @param power
+     * @return
+     */
     @Override
     public Long doCalculateValue(Long power) {
-        Long basePower = 150L;
-        return basePower;
+        return (power * 150) / 100;
     }
 
     @Override
