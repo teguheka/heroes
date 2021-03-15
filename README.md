@@ -6,8 +6,8 @@ skill test for EVOS recruitment
 - [x] Docker
 
 **System requirements**
-- JDK 8
-- Maven
+- JDK 8 (optional)
+- Maven (optional)
 - Docker
 
 ## Build and run application
@@ -19,4 +19,4 @@ The docker image for the rest api application service is defined by the file [Do
 
 The backend application will be available at http://localhost:8080
 
-Enjoy!
+The backend application will be available at http://localhost:8080/swagger-ui.html
