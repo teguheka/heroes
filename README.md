@@ -1,5 +1,5 @@
 # Game Character
-skill test for EVOS recruitment
+game character backend API
 
 - [x] Spring Boot
 - [x] MongoDB 
