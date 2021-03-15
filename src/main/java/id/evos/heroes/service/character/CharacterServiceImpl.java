@@ -17,6 +17,7 @@ import id.evos.heroes.enums.ClassArchetypeEnum;
 import id.evos.heroes.factory.ClassArchetypeFactory;
 import id.evos.heroes.repository.CharacterRepository;
 import id.evos.heroes.service.classarchetype.ClassArchetypeService;
+import org.springframework.util.StringUtils;
 
 /**
  * @author Teguh Eka Putra
