@@ -22,7 +22,7 @@ The backend application will be available at http://localhost:8080
 The backend documentation will be available at http://localhost:8080/swagger-ui.html
 
 ## Database Documentation
-![alt text](https://github.com/teguheka/heroes/blob/images/diagram_db.png?raw=true)
+![alt text](https://github.com/teguheka/heroes/blob/main/images/diagram_db.png?raw=true)
 
 ## Long Time Working
 - source code and logic: 3 hours
