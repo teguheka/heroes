@@ -23,3 +23,8 @@ The backend documentation will be available at http://localhost:8080/swagger-ui.
 
 ## Database Documentation
 ![alt text](http://www.imagebam.com/image/899faa1372379998)
+
+## Long Time Working
+- source code and logic: 3 hours
+- documentation (DB and API): half an hour
+- setup docker: 3 hours (sorry slow speed internet)
