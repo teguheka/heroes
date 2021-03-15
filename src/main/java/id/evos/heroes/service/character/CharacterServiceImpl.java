@@ -9,6 +9,7 @@ import java.util.List;
 
 import id.evos.heroes.dto.ListCharacterDTO;
 import id.evos.heroes.dto.UpdateCharacterDTO;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,6 @@ import id.evos.heroes.enums.ClassArchetypeEnum;
 import id.evos.heroes.factory.ClassArchetypeFactory;
 import id.evos.heroes.repository.CharacterRepository;
 import id.evos.heroes.service.classarchetype.ClassArchetypeService;
-import org.springframework.util.StringUtils;
 
 /**
  * @author Teguh Eka Putra
@@ -57,8 +57,8 @@ public class CharacterServiceImpl implements CharacterService {
     public void updateCharacter(UpdateCharacterDTO dto) {
         Character character = characterRepository.findById(dto.getId()).orElse(null);
         if (character != null) {
-            character.setName(dto.getName());
-            character.setPower(dto.getPower());
+            character.setName(StringUtils.defaultIfBlank(dto.getName(), character.getName()));
+            character.setPower(dto.getPower() != null ? dto.getPower() : character.getPower());
             characterRepository.save(character);
         }
     }

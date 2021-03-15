@@ -19,4 +19,7 @@ The docker image for the rest api application service is defined by the file [Do
 
 The backend application will be available at http://localhost:8080
 
-The backend application will be available at http://localhost:8080/swagger-ui.html
+The backend documentation will be available at http://localhost:8080/swagger-ui.html
+
+## Database Documentation
+![alt text](http://www.imagebam.com/image/899faa1372379998)
