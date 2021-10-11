@@ -23,8 +23,3 @@ The backend documentation will be available at http://localhost:8080/swagger-ui.
 
 ## Database Documentation
 ![alt text](https://github.com/teguheka/heroes/blob/main/images/diagram_db.png?raw=true)
-
-## Long Time Working
-- source code and logic: 3 hours
-- documentation (DB and API): half an hour
-- setup docker: 3 hours (sorry slow speed internet)
